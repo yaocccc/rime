@@ -1,0 +1,20 @@
+---
+name: pinyin.extended
+version: ""
+sort: by_weight
+use_preset_vocabulary: true
+
+import_tables:
+  - ./dict/pinyin
+  - ./dict/pinyin.chat
+  - ./dict/pinyin.xiandaihanyu
+  - ./dict/pinyin.chengyusuyu
+  - ./dict/pinyin.popular
+  - ./dict/pinyin.computer
+  - ./dict/pinyin.kaifa
+  - ./dict/pinyin.poetry
+  - ./dict/pinyin.place
+  - ./dict/pinyin.shopping
+  - ./dict/pinyin.website
+  - ./dict/pinyin.mingxing
+...
