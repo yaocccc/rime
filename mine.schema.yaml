@@ -1,6 +1,6 @@
 schema:
   schema_id: mine
-  name: 小鶴雙拼加型
+  name: 小鶴雙拼
   version: "0.18"
   author:
   description: |
@@ -80,7 +80,6 @@ speller:
 
 translator:
   dictionary: pinyin
-  prism: double_pinyin_flypy
   preedit_format:
     - xform/([bpmfdtnljqx])n/$1iao/
     - xform/(\w)g/$1eng/
