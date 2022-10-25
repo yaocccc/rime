@@ -24,3 +24,21 @@ patch:
     - { when: has_menu, accept: Tab, send: Down }
     - { when: has_menu, accept: Shift_L, send: 2 }
     - { when: has_menu, accept: Shift_R, send: 3 }
+  punctuator:
+    import_preset: symbols
+    half_shape:
+      "#": "#"
+      "*": "*"
+      "`": "`"
+      "~": "~"
+      "@": "@"
+      "=": "="
+      "/": ["/", "÷",]
+      '\': "、"
+      "'": {pair: ["「", "」"]}
+      "[": ["【", "["]
+      "]": ["】", "]"]
+      "$": ["¥", "$", "€", "£", "¢", "¤"]
+      "<": ["《", "〈", "«", "<"]
+      ">": ["》", "〉", "»", ">"]
+  recognizer/patterns/punct: "^/([0-9]0?|[A-Za-z]+)$"
