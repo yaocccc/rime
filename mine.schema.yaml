@@ -44,6 +44,7 @@ engine:
     - simplifier
     - uniquifier
 
+# 双拼实现 - 小鹤双拼
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
@@ -89,6 +90,28 @@ punctuator:
 key_binder:
   import_preset: default
 
+recognizer/patterns/punct: "^/([0-9]0?|[A-Za-z]+)$"
+
+# 符号
+punctuator:
+  import_preset: symbols
+  half_shape:
+    "#": "#"
+    "*": "*"
+    "`": "`"
+    "~": "~"
+    "@": "@"
+    "=": "="
+    "/": ["/", "÷",]
+    '\': "、"
+    "'": {pair: ["「", "」"]}
+    "[": ["【", "["]
+    "]": ["】", "]"]
+    "$": ["¥", "$", "€", "£", "¢", "¤"]
+    "<": ["《", "〈", "«", "<"]
+    ">": ["》", "〉", "»", ">"]
+
+# 自定义短语 - 基于此处实现了 单字固定词频 & 超强音型辅助码
 custom_phrase:
   dictionary: ""
   user_dict: custom_phrase
