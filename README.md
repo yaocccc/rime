@@ -11,6 +11,7 @@
     if = chen, m = 乚丨 即 ifm = 陈
     la = la,   l = 口   即 lal = 啦
     jq = jiu,  x = 丨   即 jqx = 旧
+    dajx 依旧是 大家，xl 依旧是想，不会受辅助码影响
 
 
   超强音形键位图:
