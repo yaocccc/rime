@@ -39,7 +39,7 @@ engine:
     - punct_translator
     - script_translator
     - table_translator@custom_phrase
-    - lua_translator@translator
+    - lua_translator@date_translator
   filters:
     - simplifier
     - uniquifier
@@ -117,5 +117,5 @@ custom_phrase:
   user_dict: custom_phrase
   db_class: stabledb
   enable_completion: true # 控制是否需要提示补全
-  enable_sentence: false
+  enable_sentence: true
   initial_quality: 1

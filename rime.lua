@@ -2,4 +2,4 @@
 select_character_processor = require("select_character")
 
 -- 输入特定短语转换成需要的候选
-translator = require("translator")
+date_translator = require("date_translator")
