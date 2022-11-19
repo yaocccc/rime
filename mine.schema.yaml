@@ -117,5 +117,5 @@ custom_phrase:
   user_dict: custom_phrase
   db_class: stabledb
   enable_completion: true # 控制是否需要提示补全
-  enable_sentence: true
+  enable_sentence: false
   initial_quality: 1

@@ -5,20 +5,20 @@ sort: by_weight
 use_preset_vocabulary: true
 
 import_tables:
-  - ./dicts/pinyin/pinyin
-  - ./dicts/pinyin/chat
-  - ./dicts/pinyin/xiandaihanyu
-  - ./dicts/pinyin/chengyusuyu
-  - ./dicts/pinyin/popular
-  - ./dicts/pinyin/computer
-  - ./dicts/pinyin/kaifa
-  - ./dicts/pinyin/poetry
-  - ./dicts/pinyin/place
-  - ./dicts/pinyin/shopping
-  - ./dicts/pinyin/website
-  - ./dicts/pinyin/mingxing
-  - ./dicts/pinyin/net
-  - ./dicts/pinyin/sgmain
+  - ./dicts/pinyin
+  - ./dicts/extend/chat
+  - ./dicts/extend/xiandaihanyu
+  - ./dicts/extend/chengyusuyu
+  - ./dicts/extend/popular
+  - ./dicts/extend/computer
+  - ./dicts/extend/kaifa
+  - ./dicts/extend/poetry
+  - ./dicts/extend/place
+  - ./dicts/extend/shopping
+  - ./dicts/extend/website
+  - ./dicts/extend/mingxing
+  - ./dicts/extend/net
+  - ./dicts/extend/sgmain
   - ./dicts/thirdpart/zhwiki
   - ./dicts/thirdpart/moegirl
 ...
