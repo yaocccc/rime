@@ -44,7 +44,7 @@
 
 ```plaintext
   .
-  ├── dict/                            -- 词库文件夹
+  ├── dicts/                           -- 词库文件夹
   ├── lua/                             -- lua脚本文件夹
   ├── default.custom.yaml              -- 配置索引(配置入口)
   ├── mine.schema.yaml                 -- 配置方案
