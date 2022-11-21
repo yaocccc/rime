@@ -1,4 +1,8 @@
-local function translator(input, seg)
+-- 特定输入码转换为日期、时间等
+-- date -> 'YYYY/MM/DD'
+-- time -> 'YYYY/MM/DD HH:MM:SS'
+
+local function date_translator(input, seg)
     local text=""
     if (input == "date") then
         text=os.date("%Y/%m/%d")
@@ -13,4 +17,4 @@ local function translator(input, seg)
     yield(cand)
 end
 
-return translator
+return date_translator

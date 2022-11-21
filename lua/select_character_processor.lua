@@ -1,3 +1,7 @@
+-- 以词定字
+-- e.g. 想要输入 “念” 字，可以先输入 “思念”，再使用 ] 键选择 “念” 字
+-- e.g. 想要输入 “国” 字，可以先输入 “国家”，再使用 [ 键选择 “国” 字
+
 local function utf8_sub(s, i, j)
    i = i or 1
    j = j or -1
@@ -33,7 +37,7 @@ local function last_character(s)
    return utf8_sub(s, -1, -1)
 end
 
-local function select_character(key, env)
+local function select_character_processor(key, env)
    local engine = env.engine
    local context = engine.context
    local commit_text = context:get_commit_text()
@@ -58,4 +62,4 @@ local function select_character(key, env)
    return 2 -- kNoop
 end
 
-return select_character
+return select_character_processor
