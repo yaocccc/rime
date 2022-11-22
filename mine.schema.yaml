@@ -55,7 +55,7 @@ engine:
 
 # 双拼实现 - 小鹤双拼
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba.
+  alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra:
     - erase/^xx$/
