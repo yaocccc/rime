@@ -178,5 +178,5 @@ erbi_filter:
 Q: 如何自定义短语?  
 A: 修改 custom_phrase.txt 注意不要修改上面的内容  
 
-Q: 是否支持切换双拼方案?
+Q: 是否支持切换双拼方案?  
 A: 不支持 不仅mine.schema.yaml中是根据小鹤双拼定制的，固定词库中也是以此定制  
