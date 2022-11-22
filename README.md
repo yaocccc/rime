@@ -25,6 +25,7 @@
 │   ├── top/                              -- 固顶词库 主要包含单字、用户自定义短语、辅助码词库
 │   │   ├── custom_phrase.txt             -- 自定义固顶短语
 │   │   ├── erbi_filter.txt               -- 二笔辅助码词库
+│   │   ├── erbi_filter_lookup.txt        -- 二笔辅助码反查词库
 │   │   └── top_single_char.txt           -- 固顶单字
 │   └── pinyin.dict.yaml                  -- 拼音基础词库
 ├── opencc/                               -- emoji相关opencc配置
