@@ -13,3 +13,4 @@ sync/
 user.yaml
 installation.yaml
 .place_holder
+**/*.userdb
