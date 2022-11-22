@@ -2,7 +2,109 @@
 
 基于rime实现的 以小鹤双拼作为双拼方案 以超强音形(二笔)作为辅助码 实现的输入方案
 
-## 方案简介
+## Features
+
+- [小鹤双拼](#小鹤双拼)
+- [emoji混输](#emoji混输)
+- [中英混输](#中英混输)
+- [基于二笔输入法的形码辅助码](#基于二笔输入法的形码辅助码)
+- [用户自定义短语](#用户自定义短语) 
+- [基于LUA的扩展](#基于LUA的扩展)
+
+## 配置文件结构
+
+```plaintext
+.
+├── dicts/                                -- 词库目录
+│   ├── extend/                           -- 分类扩展词库
+│   ├── thirdpart/                        -- 第三方词库
+│   ├── top/                              -- 固顶词库 主要包含单字、用户自定义短语、辅助码词库
+│   │   ├── custom_phrase.txt             -- 自定义固顶短语
+│   │   ├── erbi_filter.txt               -- 二笔辅助码词库
+│   │   └── top_single_char.txt           -- 固顶单字
+│   └── pinyin.dict.yaml                  -- 拼音基础词库
+├── opencc/                               -- emoji相关opencc配置
+├── lua                                   -- lua扩展
+│   ├── date_translator.lua               -- date、time转日期、时间实现
+│   └── select_character_processor.lua    -- 以词定字实现
+├── default.custom.yaml                   -- 配置索引
+├── mine.schema.yaml                      -- rime具体配置文件
+├── english.dict.yaml                     -- english词库
+├── english.schema.yaml                   -- english方案
+├── pinyin.extended.dict.yaml             -- 词库配置索引
+├── rime.lua                              -- lua扩展索引
+└── README.md                             -- README文件
+```
+
+## 如何使用
+
+```shell
+# 确保你已经正确安装fictx5和rime, 以archlinux举例
+sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-config-qt fcitx5-material-color fcitx5-im fcitx5-rime
+sudo echo '
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus' >> /etc/environment
+
+# clone本仓库
+mkdir -p ~/.local/share/fcitx5
+git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5
+```
+
+## 按键说明
+
+```plaintext
+  [        以词定字 选中选中词的第一个字
+  ]        以词定字 选中选中词的第二个字
+  回车     上屏
+  左shift  选中第二个候选
+  右shift  选中第三个候选
+```
+
+## 小鹤双拼
+
+具体键位不在此处额外说明 主要由 ./mine.schema.yaml/speller 处实现
+
+## emoji混输
+
+通过opencc实现 若不想使用该功能 请注释掉 ./mine.schema.yaml 中的
+
+```plaintext
+engine:
+  filters:
+    - simplifier@emoji_suggestion
+
+---
+
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+```
+
+## 中英混输
+
+通过english方案实现 若不想使用该功能 请注释掉 ./mine.schema.yaml 中的
+
+```plaintext
+engine:
+  translators:
+    - table_translator@english         # 英文输入
+
+---
+
+english:
+  dictionary: english
+  enable_completion: true
+  enable_sentence: false
+  initial_quality: 0
+```
+
+## 基于二笔输入法的形码辅助码
+
+主要通过 ./dicts/top/erbi_filter.txt 实现
 
 ```plaintext
   主: 小鹤双拼
@@ -40,46 +142,36 @@
     另需要记忆极少字根 U手、SD 日月、F人、L口、ZXCVB 金木水土草
 ```
 
-## 配置文件结构
+通过table_translator实现 若不想使用该功能 请注释掉 ./mine.schema.yaml 中的
 
 ```plaintext
-  .
-  ├── dicts/                           -- 词库文件夹
-  ├── lua/                             -- lua脚本文件夹
-  ├── default.custom.yaml              -- 配置索引(配置入口)
-  ├── mine.schema.yaml                 -- 配置方案
-  ├── custom_phrase.txt                -- 个性短语
-  ├── pinyin.extanded.dict.yaml        -- 词库
-  ├── rime.lua                         -- lua插件入口
-  └── README.md
+engine:
+  translators:
+    - table_translator@erbi_filter     # 二笔辅助码
+
+---
+
+erbi_filter:
+  dictionary: ""
+  user_dict: ./dicts/top/erbi_filter
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
 ```
 
-## 如何使用
+## 用户自定义短语
 
-```shell
-# 确保你已经正确安装fictx5和rime, 以archlinux举例
-sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-config-qt fcitx5-material-color fcitx5-im fcitx5-rime
-sudo echo '
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SDL_IM_MODULE=fcitx
-GLFW_IM_MODULE=ibus' >> /etc/environment
+若有需要自定义的短语 写入 ./dicts/top/custom_phrase.txt 即可
 
-# clone本仓库
-mkdir -p ~/.local/share/fcitx5
-git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5
-```
+## 基于LUA的扩展
 
-## 按键说明
+于 `./lua` 目录中实现了两个扩展
 
-```plaintext
-  [        以词定字 选中选中词的第一个字
-  ]        以词定字 选中选中词的第二个字
-  回车     上屏
-  左shift  选中第二个候选
-  右shift  选中第三个候选
-```
+1. 输入date、time可扩展为日期和时间
+2. 使用 `[` `]` 进行 `以词定字`
+
+如需扩展 可自行修改相关的文件
 
 ## Q & A
 
