@@ -182,6 +182,8 @@ erbi_filter_lookup:
   user_dict: ./dicts/top/erbi_filter_lookup
   db_class: stabledb
   enable_completion: true
+  comment_format:
+      - "xform/~//"
   enable_sentence: false
   initial_quality: 0
 
