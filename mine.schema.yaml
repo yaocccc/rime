@@ -45,6 +45,7 @@ engine:
     - table_translator@custom_phrase   # 自定义短语
     - table_translator@top_single_char # 固顶单字
     - table_translator@erbi_filter     # 二笔辅助码
+    - table_translator@erbi_filter_lookup # 二笔辅助码反查
     - table_translator@english         # 英文输入
     - lua_translator@date_translator
   filters:
@@ -54,7 +55,7 @@ engine:
 
 # 双拼实现 - 小鹤双拼
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
+  alphabet: zyxwvutsrqponmlkjihgfedcba.
   delimiter: " '"
   algebra:
     - erase/^xx$/
@@ -175,6 +176,14 @@ erbi_filter:
   enable_completion: false
   enable_sentence: false
   initial_quality: 1
+
+erbi_filter_lookup:
+  dictionary: ""
+  user_dict: ./dicts/top/erbi_filter_lookup
+  db_class: stabledb
+  enable_completion: true
+  enable_sentence: false
+  initial_quality: 0
 
 emoji_suggestion:
   opencc_config: emoji.json
