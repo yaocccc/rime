@@ -12,15 +12,16 @@ patch:
   ascii_composer:
     good_old_caps_lock: true
     switch_key:
-      Shift_L: commit_code
+      Shift_L: noop
       Shift_R: noop
       Control_L: noop
       Control_R: noop
-      Caps_Lock: commit_code
-      Eisu_toggle: clear
+      Caps_Lock: noop
+      Eisu_toggle: noop
   key_binder/bindings:
     - { when: paging, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
     - { when: has_menu, accept: Tab, send: Down }
-    - { when: has_menu, accept: Shift_L, send: 2 }
-    - { when: has_menu, accept: Shift_R, send: 3 }
+    - { when: has_menu, accept: Shift_L, send: 2 }         # 左shift 上屏第二个候选
+    - { when: has_menu, accept: Shift_R, send: 3 }         # 右shift 上屏第三个候选
+    - { when: has_menu, accept: Control_L, send: Escape }  # 左ctrl  清空输入

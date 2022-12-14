@@ -63,9 +63,10 @@ git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5
 ```plaintext
   [        以词定字 选中选中词的第一个字
   ]        以词定字 选中选中词的第二个字
-  回车     上屏
-  左shift  选中第二个候选
-  右shift  选中第三个候选
+  回车     上屏编码
+  左shift  上屏第二个候选
+  右shift  上屏第三个候选
+  左ctrl   清空编码
 ```
 
 ## 小鹤双拼
