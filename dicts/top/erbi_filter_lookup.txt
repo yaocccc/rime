@@ -699,6 +699,7 @@
 叼	dnjjl	11000
 吊	dnjjl	10000
 刁	dnjjn	10000
+屌	dnjjn	10000
 调	dnjjp	10000
 貂	dnjjr	10000
 雕	dnjjt	12000
