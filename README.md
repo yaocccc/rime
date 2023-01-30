@@ -55,7 +55,7 @@ GLFW_IM_MODULE=ibus' >> /etc/environment
 
 # clone本仓库
 mkdir -p ~/.local/share/fcitx5
-git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5
+git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5/rime
 ```
 
 ## 按键说明
