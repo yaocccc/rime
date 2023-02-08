@@ -27,7 +27,7 @@
 │   │   ├── erbi_filter.txt               -- 二笔辅助码词库
 │   │   ├── erbi_filter_lookup.txt        -- 二笔辅助码反查词库
 │   │   ├── top_single_char.txt           -- 固顶单字
-│   │   └─── top_words.txt                 -- 固顶词组
+│   │   └── top_words.txt                 -- 固顶词组
 │   └── pinyin.dict.yaml                  -- 拼音基础词库
 ├── opencc/                               -- emoji相关opencc配置
 ├── lua                                   -- lua扩展
