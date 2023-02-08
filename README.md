@@ -26,7 +26,8 @@
 │   │   ├── custom_phrase.txt             -- 自定义固顶短语
 │   │   ├── erbi_filter.txt               -- 二笔辅助码词库
 │   │   ├── erbi_filter_lookup.txt        -- 二笔辅助码反查词库
-│   │   └── top_single_char.txt           -- 固顶单字
+│   │   ├── top_single_char.txt           -- 固顶单字
+│   │   └─── top_words.txt                 -- 固顶词组
 │   └── pinyin.dict.yaml                  -- 拼音基础词库
 ├── opencc/                               -- emoji相关opencc配置
 ├── lua                                   -- lua扩展
@@ -178,7 +179,11 @@ e.g. 输入 `erjj` 可展示所有 拼音为 `er` 的所有字的辅助码
 
 ## 用户自定义短语
 
-若有需要自定义的短语 写入 ./dicts/top/custom_phrase.txt 即可
+```plaintext
+  若有需要自定义的短语 写入 ./dicts/top/custom_phrase.txt 即可
+  如果想某些词百分百固定在顶部 写入 ./dicts/top/top_words.txt 即可
+  如果想更改单字顺序 修改 ./dicts/top/top_single_char.txt 即可
+```
 
 ## 基于LUA的扩展
 

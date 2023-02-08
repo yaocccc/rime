@@ -44,6 +44,7 @@ engine:
     - script_translator
     - table_translator@custom_phrase   # 自定义短语
     - table_translator@top_single_char # 固顶单字
+    - table_translator@top_words       # 固顶词组
     - table_translator@erbi_filter     # 二笔辅助码
     - table_translator@erbi_filter_lookup # 二笔辅助码反查
     - table_translator@english         # 英文输入
@@ -164,6 +165,14 @@ custom_phrase:
 top_single_char:
   dictionary: ""
   user_dict: ./dicts/top/top_single_char
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+
+top_words:
+  dictionary: ""
+  user_dict: ./dicts/top/top_words
   db_class: stabledb
   enable_completion: false
   enable_sentence: false
