@@ -1,6 +1,6 @@
 schema:
   schema_id: mine
-  name: 🙂
+  name: 鹤
   version: "0.18"
   author:
   description: |
@@ -45,8 +45,8 @@ engine:
     - table_translator@custom_phrase   # 自定义短语
     - table_translator@top_single_char # 固顶单字
     - table_translator@top_words       # 固顶词组
-    - table_translator@erbi_filter     # 二笔辅助码
-    - table_translator@erbi_filter_lookup # 二笔辅助码反查
+  #  - table_translator@erbi_filter     # 二笔辅助码
+  #  - table_translator@erbi_filter_lookup # 二笔辅助码反查
     - table_translator@english         # 英文输入
     - lua_translator@date_translator
   filters:

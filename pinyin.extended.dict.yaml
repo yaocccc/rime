@@ -21,4 +21,6 @@ import_tables:
   - ./dicts/extend/sgmain
   - ./dicts/thirdpart/zhwiki
   - ./dicts/thirdpart/moegirl
+  - ./dicts/thirdpart/cn_en
+  - ./dicts/thirdpart/moba
 ...
