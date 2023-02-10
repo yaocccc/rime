@@ -182,6 +182,15 @@ e.g. 输入 `erjj` 可展示所有 拼音为 `er` 的所有字的辅助码
   如果想某些词百分百固定在顶部 写入 ./dicts/top/top_words.txt 即可
   如果想更改单字顺序 修改 ./dicts/top/top_single_char.txt 即可
 ```
+## 添加第三方词库
+
+若想添加`yaml`格式的第三方词库，只需将`*.dict.yaml`文件放在`./dicts/thirdpart/`,
+之后修改`./pinyin.extended.dict.yaml`文件内容，新增一行
+```
+- example.dict
+```
+**注意：不带扩展名**
+即可使用。
 
 ## 基于LUA的扩展
 
