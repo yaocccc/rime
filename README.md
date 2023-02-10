@@ -187,9 +187,9 @@ e.g. 输入 `erjj` 可展示所有 拼音为 `er` 的所有字的辅助码
 若想添加`yaml`格式的第三方词库，只需将`*.dict.yaml`文件放在`./dicts/thirdpart/`,
 之后修改`./pinyin.extended.dict.yaml`文件内容，新增一行
 ```
-- example.dict
+- ./dicts/thirdpart/example
 ```
-**注意：不带扩展名**
+**注意：不带扩展名(.dict.yaml)**
 
 即可使用。
 
