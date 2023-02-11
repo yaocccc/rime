@@ -178,23 +178,23 @@ top_words:
   enable_sentence: false
   initial_quality: 1
 
-erbi_filter:
-  dictionary: ""
-  user_dict: ./dicts/top/erbi_filter
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+# erbi_filter:
+#   dictionary: ""
+#   user_dict: ./dicts/top/erbi_filter
+#   db_class: stabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 1
 
-erbi_filter_lookup:
-  dictionary: ""
-  user_dict: ./dicts/top/erbi_filter_lookup
-  db_class: stabledb
-  enable_completion: true
-  comment_format:
-      - "xform/~//"
-  enable_sentence: false
-  initial_quality: 0
+# erbi_filter_lookup:
+#   dictionary: ""
+#   user_dict: ./dicts/top/erbi_filter_lookup
+#   db_class: stabledb
+#   enable_completion: true
+#   comment_format:
+#       - "xform/~//"
+#   enable_sentence: false
+#   initial_quality: 0
 
 emoji_suggestion:
   opencc_config: emoji.json
