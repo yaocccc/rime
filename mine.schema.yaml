@@ -51,7 +51,7 @@ engine:
     - lua_translator@date_translator
   filters:
     - simplifier
-    - simplifier@emoji_suggestion
+    # - simplifier@emoji_suggestion
     - uniquifier
 
 # 双拼实现 - 小鹤双拼
@@ -196,10 +196,10 @@ top_words:
 #   enable_sentence: false
 #   initial_quality: 0
 
-emoji_suggestion:
-  opencc_config: emoji.json
-  option_name: emoji_suggestion
-  tips: all
+# emoji_suggestion:
+#   opencc_config: emoji.json
+#   option_name: emoji_suggestion
+#   tips: all
 
 english:
   dictionary: english
