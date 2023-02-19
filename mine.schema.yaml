@@ -47,7 +47,7 @@ engine:
     - table_translator@top_words       # 固顶词组
   #  - table_translator@erbi_filter     # 二笔辅助码
   #  - table_translator@erbi_filter_lookup # 二笔辅助码反查
-    - table_translator@english         # 英文输入
+    # - table_translator@english         # 英文输入
     - lua_translator@date_translator
   filters:
     - simplifier
@@ -201,8 +201,8 @@ top_words:
 #   option_name: emoji_suggestion
 #   tips: all
 
-english:
-  dictionary: english
-  enable_completion: true
-  enable_sentence: false
-  initial_quality: 0
+# english:
+#   dictionary: english
+#   enable_completion: true
+#   enable_sentence: false
+#   initial_quality: 0
