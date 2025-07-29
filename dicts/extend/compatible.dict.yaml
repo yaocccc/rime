@@ -7,33 +7,35 @@ name: compatible
 version: "LTS"
 sort: by_weight
 ...
-大王	dai;ar;un;ad;xx;md;dd;an wang;at;at;aa;aa;nw;gg;at
+没收	mei shou	407
+暴晒	pu shai
+大王	dai wang	430
 教会	jiao hui	702
 爱教	ai jiao	352
 不教	bu jiao	491
 回调	hui diao	512
 回调函数	hui diao han shu	321
-结果	jie;sk;sk;sj;eo;id;xf;sk guo;tm;ln;ad,tm;vw;qe;js;an
+结果	jie guo
 看不了	kan bu le	259
 卡住	qia zhu	433
-睡着	shui;ot;oi;oi;sg;qg;ht;mi zhe;yo;yo;yo;fs;gq;ud;em
-没地	mo;du;dy;du;kl;kr;im;dy di;ty;ty;ty;ga;ge;fb;ty
+睡着	shui zhe
+没地	mo di
 办不了	ban bu le	230
 报不了	bao bu le	180
-软弹	ruan;iq;ir;iq;te;ye;lq;ir tan;gu;gl;gd;rs;bn;xu;gd
-露出	lu;yk;yk;yl;yo;ts;fk;yk chu;uu;vk;ck,aa;pp;sm;bm;va
+软弹	ruan tan
+露出	lu chu
 丁丁	zheng zheng	402
 没看着	mei kan zhao	142
 下不了	xia bu liao	221
 有多重	you duo chong	250
 多重	duo zhong	631
 不干	bu gan	569
-大夫	da;ar;un;ad;xx;md;dd;an fu;er;an;ad,er;ee;hf;fw;an
+大夫	da fu
 薄膜	bo mo	595
-没过了	mo;du;dy;du;kl;kr;im;dy guo;zc;zc;zc;kq;ku;fp;zc le;al;vl;aa,vu;rp;rl;bn;vv
-没过我	mo;du;dy;du;kl;kr;im;dy guo;zc;zc;zc;kq;ku;fp;zc wo;ga;pd;pd,pp;ua;tp;tr;pg
-没过线	mo;du;dy;du;kl;kr;im;dy guo;zc;zc;zc;kq;ku;fp;zc xian;sj;sj;sj;ea;ip;xg;sg
-没过	mo;du;dy;du;kl;kr;im;dy guo;zc;zc;zc;kq;ku;fp;zc
+没过了	mo guo le
+没过我	mo guo wo
+没过线	mo guo xian
+没过	mo guo
 摩挲	mo suo	467
 公差	gong cha	480
 好高	hao gao	491
@@ -109,6 +111,7 @@ sort: by_weight
 转来转去	zhuan lai zhuan qu	254
 得了	de liao	611
 得了	de le	734
+赢得了	ying de liao
 得是	de shi	562
 得是	dei shi	412
 还回	huan hui	312
@@ -170,7 +173,7 @@ sort: by_weight
 长细纹	zhang xi wen	250
 长羽毛	chang yu mao	252
 长羽毛	zhang yu mao	252
-区队长	qu;kx;kx;ki;dr;nb;aq;kx dui;er;er;er;be;tj;bw;er zhang;pn;pn;pd;uh;pc;ta;pn
+区队长	qu dui zhang
 重活	chong huo	120
 重天	chong tian	497
 穿着	chuan zhe	742
@@ -2217,7 +2220,7 @@ sort: by_weight
 练熟	lian shou	395
 两熟	liang shou	302
 蛮熟	man shou	294
-没熟	mei shou	490
+没熟	mei shou	410
 面熟	mian shou	400
 摸熟	mo shou	312
 轻熟	qing shou	419
@@ -4517,6 +4520,10 @@ sort: by_weight
 三个爪	san ge zhao	1
 三个止	san ge zhi	1
 三个直	san ge zhi	1
+三个𠙽	san ge zhi	1
+三个𦉼	san ge zhi	1
+四个曰	san ge zhi	1
+三个𣥚	san ge zhi	1
 三个至	san ge zhi	1
 三个丶	san ge zhu	1
 三个丶	san ge zhu	1

@@ -8,7 +8,6 @@
 - [emoji混输](#emoji混输)
 - [中英混输](#中英混输)
 - [基于二笔输入法的形码辅助码](#基于二笔输入法的形码辅助码)
-- [辅助码查询](#辅助码查询)
 - [用户自定义短语](#用户自定义短语) 
 - [基于LUA的扩展](#基于LUA的扩展)
   - [以词定字](#基于LUA的扩展)
@@ -25,9 +24,7 @@
 │   ├── top/                              -- 固顶词库 主要包含单字、用户自定义短语、辅助码词库
 │   │   ├── custom_phrase.txt             -- 自定义固顶短语
 │   │   ├── erbi_filter.txt               -- 二笔辅助码词库
-│   │   ├── erbi_filter_lookup.txt        -- 二笔辅助码反查词库
-│   │   ├── top_single_char.txt           -- 固顶单字
-│   │   └── top_words.txt                 -- 固顶词组
+│   │   └── top_single_char.txt           -- 固顶单字
 │   └── pinyin.dict.yaml                  -- 拼音基础词库
 ├── opencc/                               -- emoji相关opencc配置
 ├── lua                                   -- lua扩展
@@ -168,20 +165,10 @@ erbi_filter:
   initial_quality: 1
 ```
 
-## 辅助码查询
-
-因辅助码经常想不起来 故添加了该功能 由 ./dicts/top/erbi_filter_lookup.txt 实现  
-
-使用: 输入单字拼音再输入jj可见该拼音的所有字的辅助码  
-e.g. 输入 `erjj` 可展示所有 拼音为 `er` 的所有字的辅助码  
-
-为什么是jj, 因为小鹤双拼中没有对应候选的连续组合有 tt 和 jj，jj相对更容易使用
-
 ## 用户自定义短语
 
 ```plaintext
   若有需要自定义的短语 写入 ./dicts/top/custom_phrase.txt 即可
-  如果想某些词百分百固定在顶部 写入 ./dicts/top/top_words.txt 即可
   如果想更改单字顺序 修改 ./dicts/top/top_single_char.txt 即可
 ```
 

@@ -44,9 +44,7 @@ engine:
     - script_translator
     - table_translator@custom_phrase   # 自定义短语
     - table_translator@top_single_char # 固顶单字
-    - table_translator@top_words       # 固顶词组
     - table_translator@erbi_filter     # 二笔辅助码
-    - table_translator@erbi_filter_lookup # 二笔辅助码反查
     - table_translator@english         # 英文输入
     - lua_translator@date_translator
   filters:
@@ -160,7 +158,7 @@ custom_phrase:
   db_class: stabledb
   enable_completion: false
   enable_sentence: false
-  initial_quality: 1
+  initial_quality: 3
 
 top_single_char:
   dictionary: ""
@@ -168,33 +166,17 @@ top_single_char:
   db_class: stabledb
   enable_completion: false
   enable_sentence: false
-  initial_quality: 1
-
-top_words:
-  dictionary: ""
-  user_dict: ./dicts/top/top_words
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+  initial_quality: 2
 
 erbi_filter:
   dictionary: ""
   user_dict: ./dicts/top/erbi_filter
   db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
-
-erbi_filter_lookup:
-  dictionary: ""
-  user_dict: ./dicts/top/erbi_filter_lookup
-  db_class: stabledb
   enable_completion: true
+  enable_sentence: false
   comment_format:
       - "xform/~//"
-  enable_sentence: false
-  initial_quality: 0
+  initial_quality: 2
 
 emoji_suggestion:
   opencc_config: emoji.json
@@ -205,4 +187,6 @@ english:
   dictionary: english
   enable_completion: true
   enable_sentence: false
+  comment_format:
+    - xform/.*//           # 清空提示码
   initial_quality: 0
