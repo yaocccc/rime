@@ -63,8 +63,7 @@ git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5/rime
   ]        以词定字 选中选中词的第二个字
   回车     上屏编码
   左shift  上屏第二个候选
-  右shift  上屏第三个候选
-  左ctrl   清空编码
+  左ctrl   上屏第三个候选
 ```
 
 ## 小鹤双拼
