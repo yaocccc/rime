@@ -42,6 +42,7 @@ engine:
   translators:
     - punct_translator
     - script_translator
+    - table_translator@custom_phrase_private # 私有短语(放一些常用的，但不希望git同步的短语)
     - table_translator@custom_phrase   # 自定义短语
     - table_translator@top_single_char # 固顶单字
     - table_translator@erbi_filter     # 二笔辅助码
@@ -151,6 +152,14 @@ punctuator:
     "$": ["¥", "$", "€", "£", "¢", "¤"]
     "<": ["《", "〈", "«", "<"]
     ">": ["》", "〉", "»", ">"]
+
+custom_phrase_private:
+  dictionary: ""
+  user_dict: ./dicts/top/private
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 3
 
 custom_phrase:
   dictionary: ""
