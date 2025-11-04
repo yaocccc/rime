@@ -76,6 +76,7 @@ style:
   latin_font: latin.ttf #西文本体
   latin_locale: en_US #西文语言
   locale: zh_CN #缺省语言 zh_TW,zh_CN,zh_HK,""
+  keyboard_padding: 2 #键盘内边距
   keyboard_height: 250 #锁定键盘高度，避免切换时键盘高度变化而造成闪烁
   keyboard_height_land: 200 #锁定横屏下键盘高度，避免切换时键盘高度变化而造成闪烁
   preview_font: latin.ttf #按键提示字体
@@ -456,7 +457,7 @@ preset_keyboards:
       - {click: x, long_click: '_', swipe_up: '_', swipe_left: '_', swipe_right: '_', swipe_down: cut, key_back_color: bh3, key_text_color: th3, hint: '✂'}
       - {click: c, long_click: '/', swipe_up: '/', swipe_left: '/', swipe_right: '/', swipe_down: copy, key_back_color: bh3, key_text_color: th3, hint: '❐'}
       - {click: v, long_click: '…', swipe_up: '…', swipe_left: '…', swipe_right: '…', swipe_down: paste, key_back_color: bh3, key_text_color: th3, hint: '▣'}
-      - {click: b, long_click: ';', swipe_up: ';', swipe_left: ';', swipe_right: ';', swipe_down: ';', key_back_color: bh3, key_text_color: th3}
+      - {click: b, long_click: ';', swipe_up: ';', swipe_left: ';', swipe_right: ';', swipe_down: ',', key_back_color: bh3, key_text_color: th3, hint: ','}
       - {click: n, long_click: ':', swipe_up: ':', swipe_left: ':', swipe_right: ':', swipe_down: liquid_keyboard_clipboard, key_back_color: bh3, key_text_color: th3, hint: '📋'}
       - {click: m, long_click: '?', swipe_up: '?', swipe_left: '?', swipe_right: '?', swipe_down: Keyboard_numberb, key_back_color: bh3, key_text_color: th3, hint: '✍🏻️'}
       - {click: BackSpace, width: 15, key_back_color: bbs, key_text_color: tb3, hilited_key_back_color: gnb, hilited_key_text_color: tgn}
@@ -464,9 +465,9 @@ preset_keyboards:
       - {width: 2, key_back_color: bh2, key_text_color: th2}
       - {click: Keyboard_number, width: 22, key_back_color: num, key_text_color: ntb, round_corner: *round3, hilited_key_back_color: num, hilited_key_text_color: ntb}
       - {width: 1, key_back_color: bh2, key_text_color: th2}
-      - {click: Keyboard_bqrw, label: '🙂', long_click: Theme_settings, swipe_down: Color_switch, swipe_up: Theme_settings, width: 10, key_text_size: "16", key_back_color: bkg, key_text_color: tkg}
+      - {click: Keyboard_bqrw, long_click: Theme_settings, swipe_down: Color_switch, swipe_up: Theme_settings, width: 10, key_text_size: "16", key_back_color: bkg, key_text_color: tkg}
       - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Mode_switch, width: 30, key_back_color: bkg, key_text_color: tkg, hilited_key_back_color: bgn, hilited_key_text_color: tgn}
-      - {click: ',', long_click: '.', swipe_up: '.', swipe_down: '.', swipe_left: '.', swipe_right: '.', key_back_color: bh4, key_text_color: th4, width: 10}
+      - {click: ',', ascii: '.', label_symbol: ' ', long_click: '.', swipe_up: '.', swipe_down: '.', swipe_left: '.', swipe_right: '.', key_back_color: bh4, key_text_color: th4, width: 10}
       - {width: 1, key_back_color: bh2, key_text_color: th2}
       - {click: Return, composing: Return1, swipe_up: Escape, width: 22, key_back_color: benter, key_text_color: tenter, round_corner: *round3, hilited_key_back_color: benter, hilited_key_text_color: tenter}
       - {width: 2, key_back_color: bh2, key_text_color: th2}
@@ -2944,7 +2945,6 @@ preset_keyboards:
     ascii_mode: 1
     width: 25
     keys:
-      - {click: "^_^", key_text_size: "14"}
       - {click: "^ω^", key_text_size: "14"}
       - {click: "^o^", key_text_size: "14"}
       - {click: "~\\(≧▽≦)/~", key_text_size: "14"}
@@ -2955,34 +2955,29 @@ preset_keyboards:
       - {click: "=^_^=", key_text_size: "14"}
       - {click: "(*^ω^*)", key_text_size: "14"}
       - {click: "٩(๑^o^๑)۶", key_text_size: "14"}
-      - {click: "o(￣▽￣)o", key_text_size: "14"}
-      - {click: "Y(^_^)Y", key_text_size: "14"}
       - {click: "٩( 'ω' )و", key_text_size: "14"}
       - {click: "╰(*´︶`*)╯", key_text_size: "14"}
       - {click: "*罒▽罒*", key_text_size: "14"}
       - {click: "ヾ ^_^♪", key_text_size: "14"}
-      - {click: "=￣ω￣=", key_text_size: "14"}
       - {click: "︿(￣︶￣)︿", key_text_size: "14"}
       - {click: "(´▽｀)ノ♪", key_text_size: "14"}
       - {click: "乁( ˙ ω˙乁)", key_text_size: "14"}
       - {click: "✧*｡٩(ˊωˋ*)و✧*｡", key_text_size: "10"}
       - {click: "～(￣▽￣～)(～￣▽￣)～", width: 50, key_text_size: "14"}
-      - {click: Keyboard_bqsy1_return, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoh, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaof, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoa, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoi, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaos, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaom, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: BackSpace, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_bqsy1_return, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoh, width: 11, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaof, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoa, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoi, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaos, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaom, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: BackSpace, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
   kao_fond:
     name: 颜文字键盘-喜欢
     author: "llx"
     ascii_mode: 1
     width: 25
     keys:
-      - {click: "QwQ", key_text_size: "14"}
-      - {click: "(●—●)", key_text_size: "14"}
       - {click: "(๑• . •๑)", key_text_size: "14"}
       - {click: "ヾ(≧O≦)〃嗷~", key_text_size: "12"}
       - {click: "罒ω罒", key_text_size: "14"}
@@ -2990,11 +2985,9 @@ preset_keyboards:
       - {click: "(๑•ี_เ•ี๑)", key_text_size: "14"}
       - {click: "ㄟ(≧◇≦)ㄏ", key_text_size: "14"}
       - {click: "(*/ω＼*)", key_text_size: "14"}
-      - {click: "●▽●", key_text_size: "14"}
       - {click: "٩(๑òωó๑)۶", key_text_size: "14"}
       - {click: "✺◟(∗❛ัᴗ❛ั∗)◞✺", key_text_size: "12"}
       - {click: "( σ'ω')σ", key_text_size: "14"}
-      - {click: "♡＾▽＾♡", key_text_size: "14"}
       - {click: "(๑•̀ㅂ•́)و✧", key_text_size: "14"}
       - {click: "(ง •̀_•́)ง", key_text_size: "14"}
       - {click: "(｡･ω･｡)ﾉ♡", key_text_size: "14"}
@@ -3005,14 +2998,14 @@ preset_keyboards:
       - {click: "～(^з^)-☆", key_text_size: "14"}
       - {click: "(´∀｀)♡", key_text_size: "14"}
       - {click: "ლ(´ڡ`ლ)", key_text_size: "14"}
-      - {click: Keyboard_bqsy1_return, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoh, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaof, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoa, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoi, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaos, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaom, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: BackSpace, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_bqsy1_return, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoh, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaof, width: 11, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoa, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoi, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaos, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaom, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: BackSpace, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
   kao_sad:
     name: 颜文字键盘-伤心
     author: "llx"
@@ -3020,11 +3013,9 @@ preset_keyboards:
     width: 25
     keys:
       - {click: "(＞﹏＜)", key_text_size: "14"}
-      - {click: "T_T", key_text_size: "14"}
       - {click: "⊙︿⊙", key_text_size: "14"}
       - {click: "〒▽〒", key_text_size: "14"}
       - {click: "⊙﹏⊙", key_text_size: "14"}
-      - {click: "π_π", key_text_size: "14"}
       - {click: "(｡•́︿•̀｡)", key_text_size: "14"}
       - {click: "(ToT)/~~~", key_text_size: "14"}
       - {click: "╯﹏╰", key_text_size: "14"}
@@ -3041,16 +3032,14 @@ preset_keyboards:
       - {click: "(´;︵;`)", key_text_size: "14"}
       - {click: "(。﹏。)", key_text_size: "14"}
       - {click: "┗( T﹏T )┛", key_text_size: "14"}
-      - {click: "QAQ", key_text_size: "14"}
-      - {click: "ヘ(_ _ヘ)", key_text_size: "14"}
-      - {click: Keyboard_bqsy1_return, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoh, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaof, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoa, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoi, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaos, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaom, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: BackSpace, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_bqsy1_return, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoh, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaof, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoa, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoi, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaos, width: 11, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaom, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: BackSpace, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
   kao_mad:
     name: 颜文字键盘-生气
     author: "llx"
@@ -3059,7 +3048,6 @@ preset_keyboards:
     keys:
       - {click: "╰（‵□′）╯", key_text_size: "14"}
       - {click: "(*￣︿￣)", key_text_size: "14"}
-      - {click: ">o<", key_text_size: "14"}
       - {click: "(-`ェ´-怒)", key_text_size: "14"}
       - {click: "ヽ(‘⌒´メ)ノ", key_text_size: "14"}
       - {click: "(*｀Ω´*)v", key_text_size: "14"}
@@ -3067,7 +3055,6 @@ preset_keyboards:
       - {click: "(怒｀Д´怒)", key_text_size: "14"}
       - {click: "٩(๑`^´๑)۶", key_text_size: "14"}
       - {click: "(;｀O´)o", key_text_size: "14"}
-      - {click: "╰_╯", key_text_size: "14"}
       - {click: "(#｀皿´)<怒怒怒!!!", key_text_size: "10"}
       - {click: "<(｀^´)>", key_text_size: "14"}
       - {click: "（｀Δ´）！", key_text_size: "14"}
@@ -3076,66 +3063,58 @@ preset_keyboards:
       - {click: "s(・｀ヘ´・;)ゞ", key_text_size: "12"}
       - {click: "(▼皿▼#)", key_text_size: "14"}
       - {click: "￣へ￣", key_text_size: "14"}
-      - {click: "←_←", key_text_size: "14"}
       - {click: "（╯‵□′）╯︵┴─┴", key_text_size: "9"}
       - {click: "（▼へ▼メ）", key_text_size: "14"}
       - {click: "☄ฺ(◣д◢)☄ฺ", key_text_size: "14"}
-      - {click: "→_→", key_text_size: "14"}
-      - {click: Keyboard_bqsy1_return, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoh, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaof, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoa, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoi, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaos, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaom, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: BackSpace, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_bqsy1_return, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoh, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaof, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoa, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoi, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaos, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaom, width: 11, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: BackSpace, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
   kao_astonished:
     name: 颜文字键盘-惊讶
     author: "llx"
     ascii_mode: 1
     width: 25
     keys:
-      - {click: "⊙_⊙", key_text_size: "14"}
       - {click: "d(ŐдŐ๑)", key_text_size: "14"}
       - {click: "Σ( ° △ °|||)︴", key_text_size: "14"}
       - {click: "(((φ(◎ロ◎;)φ)))", key_text_size: "10"}
-      - {click: "⊙▽⊙", key_text_size: "14"}
       - {click: "(๑ŐдŐ)b", key_text_size: "14"}
       - {click: "╭(°A°`)╮", key_text_size: "14"}
       - {click: "(๑òᆺó๑)", key_text_size: "14"}
-      - {click: "⊙ω⊙", key_text_size: "14"}
       - {click: "Σ(っ °Д °;)っ", key_text_size: "14"}
       - {click: " (ﾟДﾟ≡ﾟдﾟ)!?", key_text_size: "14"}
       - {click: "( *・ω・)✄╰ひ╯", key_text_size: "10"}
       - {click: "(⊙x⊙;)", key_text_size: "14"}
       - {click: "┌(。Д。)┐", key_text_size: "14"}
       - {click: "(°ー°〃)", key_text_size: "14"}
-      - {click: "备用", key_text_size: "14"}
       - {click: "︽⊙_⊙︽", key_text_size: "14"}
       - {click: "!!!∑(°Д°ノ)ノ", key_text_size: "14"}
       - {click: "(๑ŐдŐ)b☆d(ŐдŐ๑)", width: 50, key_text_size: "14"}
       - {click: "Σ⊙▃⊙川", key_text_size: "14"}
       - {click: "ヽ(*。>Д<)o゜", key_text_size: "14"}
       - {click: "━((*′д｀)爻(′д｀*))━!!!!", width: 50, key_text_size: "14"}
-      - {click: Keyboard_bqsy1_return, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoh, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaof, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoa, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoi, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaos, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaom, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: BackSpace, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_bqsy1_return, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoh, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaof, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoa, width: 11, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoi, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaos, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaom, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: BackSpace, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
   kao_impotent:
     name: 颜文字键盘-无奈
     author: "llx"
     ascii_mode: 1
     width: 25
     keys:
-      - {click: "=_=", key_text_size: "14"}
       - {click: "╮(╯_╰)╭", key_text_size: "14"}
       - {click: "（︶︿︶）", key_text_size: "14"}
       - {click: "_(:з」∠)_", key_text_size: "14"}
-      - {click: "@_@", key_text_size: "14"}
       - {click: "╮(╯▽╰)╭", key_text_size: "14"}
       - {click: "(＠￣ー￣＠)", key_text_size: "14"}
       - {click: "_(:3」∠❀)_", key_text_size: "14"}
@@ -3150,19 +3129,17 @@ preset_keyboards:
       - {click: "-_-#", key_text_size: "14"}
       - {click: "┑(￣Д ￣)┍", key_text_size: "14"}
       - {click: "≡￣﹏￣≡", key_text_size: "14"}
-      - {click: "○|￣|_", key_text_size: "14"}
       - {click: "-_-||", key_text_size: "14"}
       - {click: "ㄟ( ▔, ▔ )ㄏ", key_text_size: "14"}
       - {click: "( ＿ ＿)ノ｜壁", key_text_size: "14"}
-      - {click: "▄█▀█●", key_text_size: "14"}
-      - {click: Keyboard_bqsy1_return, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaoh, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaof, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoa, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaoi, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
-      - {click: Keyboard_kaos, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: Keyboard_kaom, width: 12.5, key_text_size: "16", key_back_color: bgn, key_text_color: tgn}
-      - {click: BackSpace, width: 12.5, key_text_size: "16", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_bqsy1_return, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaoh, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaof, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoa, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaoi, width: 11, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
+      - {click: Keyboard_kaos, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: Keyboard_kaom, width: 11, key_text_size: "14", key_back_color: bgn, key_text_color: tgn}
+      - {click: BackSpace, width: 17, key_text_size: "14", key_back_color: benter, key_text_color: tenter}
 
 preset_keys:
   # 安卓
@@ -3243,7 +3220,7 @@ preset_keys:
   liquid_keyboard_emoji: { label: 🙂, send: function, command: liquid_keyboard, option: "emoji" }
   liquid_keyboard_clipboard: { label: '󰕲', send: function, command: liquid_keyboard, option: "剪贴" }
   # rime状态
-  Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 中, 英 ]}
+  Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ ZH, EN ]}
   Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半角, 全角 ]}
   Henkan: {toggle: simplification, send: Mode_switch, states: [ 汉字, 汉字 ]}
   Charset_switch: {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增广 ]}
@@ -3309,7 +3286,7 @@ preset_keys:
 
    # 表情键自定义
   Keyboard_bqfh: {label: ⌘, functional: true, send: Eisu_toggle, select: bqfh1}
-  Keyboard_bqrw: {label: 符, functional: false, send: Eisu_toggle, select: bqfh1}
+  Keyboard_bqrw: {label: 🙂, functional: false, send: Eisu_toggle, select: bqfh1}
   Keyboard_bqrw1: {label: '🙂', functional: false, send: Eisu_toggle, select: bqrw1}
   Keyboard_bqrw2: {label: 人物2,functional: false, send: Eisu_toggle, select: bqrw2}
   Keyboard_bqrw3: {label: 人物3, functional: false, send: Eisu_toggle, select: bqrw3}
