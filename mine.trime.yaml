@@ -445,8 +445,8 @@ preset_keyboards:
       - {click: d, long_click: '#', swipe_up: '#', swipe_down: '#', swipe_left: '#', swipe_right: '#', key_back_color: bh2, key_text_color: th2}
       - {click: f, long_click: '$', swipe_up: '$', swipe_down: '$', swipe_left: '$', swipe_right: '$', key_back_color: bh2, key_text_color: th2}
       - {click: g, long_click: '%', swipe_up: '%', swipe_down: '%', swipe_left: '%', swipe_right: '%', key_back_color: bh2, key_text_color: th2}
-      - {click: h, long_click: '&', swipe_up: '&', swipe_down: '=', swipe_left: '&', swipe_right: '&', key_back_color: bh2, key_text_color: th2, hint: '='}
-      - {click: j, long_click: '*', swipe_up: '*', swipe_down: '/', swipe_left: '*', swipe_right: '*', key_back_color: bh2, key_text_color: th2, hint: '/'}
+      - {click: h, long_click: '&', swipe_up: '&', swipe_down: '&', swipe_left: '&', swipe_right: '&', key_back_color: bh2, key_text_color: th2}
+      - {click: j, long_click: '*', swipe_up: '*', swipe_down: '=', swipe_left: '*', swipe_right: '*', key_back_color: bh2, key_text_color: th2, hint: '='}
       - {click: k, long_click: '+', swipe_up: '+', swipe_down: '-', swipe_left: '+', swipe_right: '+', key_back_color: bh2, key_text_color: th2, hint: '-'}
       - {click: l, long_click: '(){Left}', swipe_up: '(){Left}', swipe_down: '""{Left}', swipe_left: '(', swipe_right: ')', key_back_color: bh2, key_text_color: th2, hint: '""'}
       - {width: 5, key_back_color: bh2, key_text_color: th2}
@@ -454,7 +454,7 @@ preset_keyboards:
       - {click: Shift_L, composing: delimiter, width: 15, hilited_key_back_color: gnb, hilited_key_text_color: tgn, key_back_color: bbs, key_text_color: th3}
       - {click: z, long_click: '~', swipe_up: '~', swipe_left: '~', swipe_right: '~', swipe_down: select_all, key_back_color: bh3, key_text_color: th3, hint: '☑'}
       - {click: x, long_click: '_', swipe_up: '_', swipe_left: '_', swipe_right: '_', swipe_down: cut, key_back_color: bh3, key_text_color: th3, hint: '✂'}
-      - {click: c, long_click: "\\", swipe_up: "\\", swipe_left: "\\", swipe_right: "\\", swipe_down: copy, key_back_color: bh3, key_text_color: th3, hint: '❐'}
+      - {click: c, long_click: '/', swipe_up: '/', swipe_left: '/', swipe_right: '/', swipe_down: copy, key_back_color: bh3, key_text_color: th3, hint: '❐'}
       - {click: v, long_click: '…', swipe_up: '…', swipe_left: '…', swipe_right: '…', swipe_down: paste, key_back_color: bh3, key_text_color: th3, hint: '▣'}
       - {click: b, long_click: ';', swipe_up: ';', swipe_left: ';', swipe_right: ';', swipe_down: ';', key_back_color: bh3, key_text_color: th3}
       - {click: n, long_click: ':', swipe_up: ':', swipe_left: ':', swipe_right: ':', swipe_down: liquid_keyboard_clipboard, key_back_color: bh3, key_text_color: th3, hint: '📋'}
