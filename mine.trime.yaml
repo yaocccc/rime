@@ -167,6 +167,9 @@ colors:
   17: &color17 0xff0B57CF #回车键背景
   18: &color18 0xffC9CBC8 #高亮功能背景
   19: &color19 0xffD8DBE0 #高亮候选背景
+
+  20: &color20 0xffff82da #回车键背景(粉色)
+  21: &color21 0xffFFD2FE #数字键颜色(淡粉)
   
 #配色方案
 preset_color_schemes:
@@ -268,6 +271,56 @@ preset_color_schemes:
     bh4: *color2 #第四行背景色
     th4: *color1 #第四行文字颜色
     num: *color7 #数字键颜色
+    ntb: *color5 #数字键文字颜色
+    gnb: *color11 #高亮功能键
+
+  darkPink:
+    name: "粉色夜间"  #方案名称
+    author: mine #作者信
+    back_color: *color3 #候选区背景状态栏
+    candidate_separator_color: *color2 #候选分割背景
+    candidate_text_color: *color1 #候选文本
+    comment_text_color: *color1 #提示
+    hilited_back_color: *color2 #高亮编码背景
+    hilited_candidate_back_color: *color10 #高亮候选背景
+    hilited_candidate_text_color: *color1 #高亮候选文本
+    hilited_comment_text_color: *color1 #高亮提示
+    hilited_key_back_color: *color3 #高亮按键背景
+    hilited_key_symbol_color: *color2 #高亮按键符号
+    hilited_key_text_color: *color9 #高亮按键文本
+    hilited_off_key_back_color: *color2 #高亮按键关闭状态背景
+    hilited_off_key_text_color: *color1 #高亮按键关闭状态文本
+    hilited_text_color: *color1 #高亮编码
+    key_back_color: *color2 #按键背景
+    key_symbol_color: *color1 #按键符号
+    key_text_color: *color1 #按键文本
+    keyboard_back_color: *color3 #键盘背景
+    label_color: *color20 #标签
+    off_key_back_color: *color4  #按键关闭状态背景
+    off_key_text_color: *color8 #按键关闭状态文本
+    preview_back_color: *color2 #按键提示背景
+    preview_text_color: *color1 #按键提示文本
+    text_color: *color20 #编码
+    text_back_color: *color2 #编码区背景
+    bkg: *color2 #空格键背景色
+    tkg: *color1 #空格键文字颜色
+    benter: *color20 #回车键背景色
+    tenter: *color5 #回车键文字颜色
+    bgn: *color4 #功能键背景色
+    tgn: *color1 #功能键文字颜色
+    bbs: *color4 #退格键背景色
+    tbs: *color2 #退格键文字颜色
+    baoe: *color2 #aoeiu背景色
+    taoe: *color20 #aoeiu文字颜色
+    bh1: *color2 #第一行背景色
+    th1: *color1 #第一行文字颜色
+    bh2: *color2 #第二行背景色
+    th2: *color1 #第二行文字颜色
+    bh3: *color2 #第三行背景色
+    th3: *color1 #第三行文字颜色
+    bh4: *color2 #第四行背景色
+    th4: *color1 #第四行文字颜色
+    num: *color21 #数字键颜色
     ntb: *color5 #数字键文字颜色
     gnb: *color11 #高亮功能键
 
@@ -419,6 +472,51 @@ liquid_keyboard:
     name: 符号表
     keys: [ 符号: '/fh', 电脑: '/dn', 象棋: '/xq', 麻将: '/mj', 骰子: '/sz', 扑克: '/pk', 天气: '/tq', 音乐: '/yy', 八卦: '/bg', 易经: '/lssg', 天体: '/tt',  星座: '/xz',  星号: '/xh',  方块: '/fk',  几何: '/jh',  箭头: '/jt',  数学: '/sx',  上标: '/sb',  下标: '/xb',  单位: '/dw',  货币: '/hb',  拼音: '/py',  注音: '/zy',  假名: '/jm',  片假: '/pjm',  韩文: '/hw',  希腊: '/xl',  希大: '/xld', 罗马:   '/lm',  罗大:   '/lmd', 俄语:   '/ey',  俄大:   '/eyd', 表情:  '/bq',  一: '/1',  二: '/2',  三: '/3',  四: '/4',  五: '/5',  六: '/6',  七: '/7',  八: '/8',  九: '/9',  零: '/0',  十: '/10',  分数: '/fs',  标点: '/bd',  偏旁: '/pp',  竖标:  '/bdz'  ]
   
+tool_bar:
+  button_spacing: 5 # 按钮间距
+  button_font: iconfont.ttf # 按钮字体
+
+  # 左侧固定主按钮配置
+  primary_button:
+    background:
+      type: circle           # 高亮形状 (可选值: circle|rectangle)
+      corner_radius: 10      # 圆角半径
+      bg_normal: 0x00        # 正常状态背景颜色
+      bg_highlight: hilited_candidate_button_color  # 高亮状态背景色
+      vertical_inset: 4      # 垂直方向内缩量
+      horizontal_inset: 0    # 水平方向内缩量
+    foreground:
+      style: "ic@dots_horizontal"         # 内置质感设计图标样式（以ic@开头）
+      bg_normal: candidate_text_color  # 正常状态前景色 (本地图片不允许着色)
+      padding: 10            # 前景内容与背景边界的内边距
+    action: menu_keyboard
+
+  hide_button: &hide_button
+    foreground:
+      style: "ic@keyboard_close"
+      bg_normal: candidate_text_color
+    action: Hide
+
+  emoji_button: &emoji_button
+    foreground:
+      style: "ic@emoticon"
+    # 前景样式可以为空，使用默认样式，按钮将显示为 action 的 label
+    action: liquid_keyboard_emoji
+
+  clipboard_button: &clipboard_button
+    foreground:
+      style: "ic@clipboard"
+    action: liquid_keyboard_clipboard
+
+  ascii_mode_button: &ascii_mode_button
+    foreground:
+      option_styles: ["En", "中"] # 样式也可以为表，将根据 action 的 toggle 决定
+      font_size: 18  # 按钮字体大小
+      padding: 10
+    action: Mode_switch
+
+  # 右侧按钮列表（从右向左排列）
+  buttons: [ *hide_button, *emoji_button, *clipboard_button, *ascii_mode_button ]
 
 #键盘布局
 preset_keyboards:
@@ -457,9 +555,9 @@ preset_keyboards:
       - {click: x, long_click: '_', swipe_up: '_', swipe_left: '_', swipe_right: '_', swipe_down: cut, key_back_color: bh3, key_text_color: th3, hint: '✂'}
       - {click: c, long_click: '/', swipe_up: '/', swipe_left: '/', swipe_right: '/', swipe_down: copy, key_back_color: bh3, key_text_color: th3, hint: '❐'}
       - {click: v, long_click: '…', swipe_up: '…', swipe_left: '…', swipe_right: '…', swipe_down: paste, key_back_color: bh3, key_text_color: th3, hint: '▣'}
-      - {click: b, long_click: ';', swipe_up: ';', swipe_left: ';', swipe_right: ';', swipe_down: ',', key_back_color: bh3, key_text_color: th3, hint: ','}
-      - {click: n, long_click: ':', swipe_up: ':', swipe_left: ':', swipe_right: ':', swipe_down: liquid_keyboard_clipboard, key_back_color: bh3, key_text_color: th3, hint: '📋'}
-      - {click: m, long_click: '?', swipe_up: '?', swipe_left: '?', swipe_right: '?', swipe_down: Keyboard_numberb, key_back_color: bh3, key_text_color: th3, hint: '✍🏻️'}
+      - {click: b, long_click: '?', swipe_up: '?', swipe_left: '?', swipe_right: '?', swipe_down: ',', key_back_color: bh3, key_text_color: th3, hint: ','}
+      - {click: n, long_click: ';', swipe_up: ';', swipe_left: ';', swipe_right: ';', swipe_down: liquid_keyboard_clipboard, key_back_color: bh3, key_text_color: th3, hint: '📋'}
+      - {click: m, long_click: ':', swipe_up: ':', swipe_left: ':', swipe_right: ':', swipe_down: Keyboard_numberb, key_back_color: bh3, key_text_color: th3, hint: '✍🏻️'}
       - {click: BackSpace, width: 15, key_back_color: bbs, key_text_color: tb3, hilited_key_back_color: gnb, hilited_key_text_color: tgn}
 
       - {width: 2, key_back_color: bh2, key_text_color: th2}
@@ -3227,6 +3325,7 @@ preset_keys:
   Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: [ 。，, ．， ]}
   # trime设置
   IME_switch: {label: 🌐, send: LANGUAGE_SWITCH} #彈出對話框選擇輸入法
+  IME_switch2: {label: 🌐, send: LANGUAGE_SWITCH, select: .next} #彈出對話框選擇輸入法
   IME_last: {label: 上一输入法, send: LANGUAGE_SWITCH, select: .last} #直接切換到上一輸入法
   IME_next: {label: 下一输入法, send: LANGUAGE_SWITCH, select: .next} #直接切換到下一輸入法
   Schema_switch: {label: 下一方案, functional: false, send: Control+Shift+1}
