@@ -97,12 +97,12 @@ style:
   vertical_gap: *sgap #键盘行距
   enter_label_mode: 0  #是否使用App提供的ActionLabel内容作为Enter键的文本（由于多数App没有适配ActionLable，实际影响不大）。0不使用，1只使用actionlabel，2优先使用，3当其他方式没有获得label时才读取actionlabel
   enter_labels:  # 定义Enter键的文本
-    go: ➜
-    done: 完成
-    next: 下个
-    pre:  上个
-    search: 搜索
-    send: 发送
+    # go: ➜
+    # done: 完成
+    # next: 下个
+    # pre:  上个
+    # search: 搜索
+    # send: 发送
     default: Enter   # 定义默认Enter键的文本
 
 # 最好保留一项，防止其他主题使用 __include 时无法加载
@@ -168,8 +168,11 @@ colors:
   18: &color18 0xffC9CBC8 #高亮功能背景
   19: &color19 0xffD8DBE0 #高亮候选背景
 
-  20: &color20 0xffff82da #回车键背景(粉色)
-  21: &color21 0xffFFD2FE #数字键颜色(淡粉)
+  20: &color20 0xffFF92Fa #回车键背景(粉色)
+  21: &color21 0xffFAD9E6 #数字键颜色(淡粉)
+
+  22: &color22 0xffFFD700 #回车键背景(黄色)
+  23: &color23 0xfffeECc7 #数字键颜色(淡黄)
   
 #配色方案
 preset_color_schemes:
@@ -224,7 +227,7 @@ preset_color_schemes:
     ntb: *color13 #数字键文字颜色
     gnb: *color18 #高亮功能键
 
-  dark:
+  darkBlue:
     name: "蓝色夜间"  #方案名称
     author: mine #作者信
     back_color: *color3 #候选区背景状态栏
@@ -321,6 +324,56 @@ preset_color_schemes:
     bh4: *color2 #第四行背景色
     th4: *color1 #第四行文字颜色
     num: *color21 #数字键颜色
+    ntb: *color5 #数字键文字颜色
+    gnb: *color11 #高亮功能键
+
+  darkYellow:
+    name: "黄色夜间"  #方案名称
+    author: mine #作者信
+    back_color: *color3 #候选区背景状态栏
+    candidate_separator_color: *color2 #候选分割背景
+    candidate_text_color: *color1 #候选文本
+    comment_text_color: *color1 #提示
+    hilited_back_color: *color2 #高亮编码背景
+    hilited_candidate_back_color: *color10 #高亮候选背景
+    hilited_candidate_text_color: *color1 #高亮候选文本
+    hilited_comment_text_color: *color1 #高亮提示
+    hilited_key_back_color: *color3 #高亮按键背景
+    hilited_key_symbol_color: *color2 #高亮按键符号
+    hilited_key_text_color: *color9 #高亮按键文本
+    hilited_off_key_back_color: *color2 #高亮按键关闭状态背景
+    hilited_off_key_text_color: *color1 #高亮按键关闭状态文本
+    hilited_text_color: *color1 #高亮编码
+    key_back_color: *color2 #按键背景
+    key_symbol_color: *color1 #按键符号
+    key_text_color: *color1 #按键文本
+    keyboard_back_color: *color3 #键盘背景
+    label_color: *color22 #标签
+    off_key_back_color: *color4  #按键关闭状态背景
+    off_key_text_color: *color8 #按键关闭状态文本
+    preview_back_color: *color2 #按键提示背景
+    preview_text_color: *color1 #按键提示文本
+    text_color: *color22 #编码
+    text_back_color: *color2 #编码区背景
+    bkg: *color2 #空格键背景色
+    tkg: *color1 #空格键文字颜色
+    benter: *color22 #回车键背景色
+    tenter: *color5 #回车键文字颜色
+    bgn: *color4 #功能键背景色
+    tgn: *color1 #功能键文字颜色
+    bbs: *color4 #退格键背景色
+    tbs: *color2 #退格键文字颜色
+    baoe: *color2 #aoeiu背景色
+    taoe: *color22 #aoeiu文字颜色
+    bh1: *color2 #第一行背景色
+    th1: *color1 #第一行文字颜色
+    bh2: *color2 #第二行背景色
+    th2: *color1 #第二行文字颜色
+    bh3: *color2 #第三行背景色
+    th3: *color1 #第三行文字颜色
+    bh4: *color2 #第四行背景色
+    th4: *color1 #第四行文字颜色
+    num: *color23 #数字键颜色
     ntb: *color5 #数字键文字颜色
     gnb: *color11 #高亮功能键
 
@@ -500,8 +553,7 @@ tool_bar:
   emoji_button: &emoji_button
     foreground:
       style: "ic@emoticon"
-    # 前景样式可以为空，使用默认样式，按钮将显示为 action 的 label
-    action: liquid_keyboard_emoji
+    action: Keyboard_bqrw
 
   clipboard_button: &clipboard_button
     foreground:
@@ -563,9 +615,9 @@ preset_keyboards:
       - {width: 2, key_back_color: bh2, key_text_color: th2}
       - {click: Keyboard_number, width: 22, key_back_color: num, key_text_color: ntb, round_corner: *round3, hilited_key_back_color: num, hilited_key_text_color: ntb}
       - {width: 1, key_back_color: bh2, key_text_color: th2}
-      - {click: Keyboard_bqrw, long_click: Theme_settings, swipe_down: Color_switch, swipe_up: Theme_settings, width: 10, key_text_size: "16", key_back_color: bkg, key_text_color: tkg}
+      - {click: Keyboard_period, ascii: Keyboard_comma_en, has_menu: keyboard_third, key_back_color: bh4, key_text_color: th4, width: 10}
       - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Mode_switch, width: 30, key_back_color: bkg, key_text_color: tkg, hilited_key_back_color: bgn, hilited_key_text_color: tgn}
-      - {click: ',', ascii: '.', label_symbol: ' ', long_click: '.', swipe_up: '.', swipe_down: '.', swipe_left: '.', swipe_right: '.', key_back_color: bh4, key_text_color: th4, width: 10}
+      - {click: Keyboard_comma, ascii: Keyboard_period_en, has_menu: keyboard_second, key_back_color: bh4, key_text_color: th4, width: 10}
       - {width: 1, key_back_color: bh2, key_text_color: th2}
       - {click: Return, composing: Return1, swipe_up: Escape, width: 22, key_back_color: benter, key_text_color: tenter, round_corner: *round3, hilited_key_back_color: benter, hilited_key_text_color: tenter}
       - {width: 2, key_back_color: bh2, key_text_color: th2}
@@ -3287,19 +3339,12 @@ preset_keys:
   share_text: {label: 分享文本, send: Control+Alt+s} #>=Android 6.0
   redo: {label: 重做, functional: false, send: Control+Shift+z} #>=Android 6.0
   undo: {label: 撤銷, functional: false, send: Control+z} #>=Android 6.0
-  delimiter: {label: 分词, text: ''''}
+  delimiter: {label: 'Shift', text: ''''}
   x1: {text: '{Home}{Right}{Right}', label: 单字, functional: false}
   x2: {text: '{Home}{Right}{Right}{Right}{Right}', label: 二字, functional: false}
   x3: {text: '{Home}{Right}{Right}{Right}{Right}{Right}{Right}', label: 三字, functional: false}
   x4: {text: '{Home}{Right}{Right}{Right}{Right}{Right}{Right}{Right}{Right}', label: 四字, functional: false}
  # x1: {text: '{Home}{Right}{Right}', label: 单字, functional: false}
-  # rime组合键
-  F4: {label: 方案菜单, send: F4}
-  BackToPreviousSyllable: {label: 删音节, send: Control+BackSpace}
-  CommitRawInput: {label: 编码, send: Control+Return}
-  CommitScriptText: {label: 编码, send: Shift+Return}
-  CommitComment: {label: 编码, send: Control+Shift+Return}
-  DeleteCandidate: {label: 删词, send: Control+Delete, functional: false}
   #切换键盘
   Keyboard_letter: { label: 字母, functional: true, send: Eisu_toggle, select: default }
   Keyboard_default: { label: 返回, functional: false, send: Eisu_toggle, select: .default }
@@ -3317,13 +3362,8 @@ preset_keys:
   liquid_keyboard_tabs: { label: 更多, send: function, command: liquid_keyboard, option: "更多" }
   liquid_keyboard_emoji: { label: 🙂, send: function, command: liquid_keyboard, option: "emoji" }
   liquid_keyboard_clipboard: { label: '󰕲', send: function, command: liquid_keyboard, option: "剪贴" }
-  # rime状态
+  menu_keyboard: { label: 菜单, send: function, command: menu_keyboard }
   Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ ZH, EN ]}
-  Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半角, 全角 ]}
-  Henkan: {toggle: simplification, send: Mode_switch, states: [ 汉字, 汉字 ]}
-  Charset_switch: {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增广 ]}
-  Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: [ 。，, ．， ]}
-  # trime设置
   IME_switch: {label: 🌐, send: LANGUAGE_SWITCH} #彈出對話框選擇輸入法
   IME_switch2: {label: 🌐, send: LANGUAGE_SWITCH, select: .next} #彈出對話框選擇輸入法
   IME_last: {label: 上一输入法, send: LANGUAGE_SWITCH, select: .last} #直接切換到上一輸入法
@@ -3336,52 +3376,19 @@ preset_keys:
   Info: {label: 关于, send: INFO}
   Menu: {label: 菜单, functional: false, send: Menu}
   Settings: {label: 设置, functional: false, send: SETTINGS}
-  # trime命令
-  Date: {label: 日期, send: function, command: date, option: " yyyy-MM-dd "}
-  Time: {label: 時間, send: function, command: date, option: "HH:mm:ss"} #時間： date 格式
-  TrimeApp: {label: 同文, send: function, command: run, option: "com.osfans.trime"} #運行程序: run 包名
-  TrimeCmp: {label: 同文組件, send: function, command: run, option: "com.osfans.trime/.Pref"} #運行程序指定組件: run 包名/組件名
-  Homepage: {label: 同文主頁, send: function, command: run, option: "https://github.com/osfans/trime"} #查看網頁: run 網址
-  Wiki: {label: 維基, send: function, command: run, option: "https://zh.wikipedia.org/wiki/%s"} #搜索網頁: %s或者%1$s爲當前字符
-  Google: {label: 谷歌, send: function, command: run, option: "https://www.google.com/search?q=%s"} #搜索網頁: %s或者%1$s爲當前字符
-  MoeDict: {label: 萌典, send: function, command: run, option: "https://www.moedict.tw/%3$s"} #搜索網頁: %3$s爲光標前字符
-  Baidu: {label: 百度搜索, send: function, command: run, option: "https://www.baidu.com/s?wd=%4$s"} #搜索網頁: %4s爲光標前所有字符
-  Zdic: {label: 漢典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%1$s"} #搜索網頁: %s或者%1$s爲當前字符
-  Zdic2: {label: 漢典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%2$s"} #搜索網頁: %2$s爲當前輸入的編碼
-  WebSearch: {label: 搜索網頁, send: function, command: web_search, option: "%4$s"} #搜索，其他view、dial、edit、search等intent，參考安卓的intent文檔：https://developer.android.com/reference/android/content/Intent.html
   
   Left1: {label: '⇦', send: Control+Left, repeatable: true, functional: false}
   Right1: {label: '⇨', send: Control+Right, repeatable: true, functional: false}
   Shift_L2: {label: 选择, preview: '⇪', functional: false, send: Shift_L}
 
-  # 22自定义功能键
-  Keyboard_defaulten: {label: EN, functional: false, send: Eisu_toggle, select: letter}
-  Schema_switchen1: {label: EN, send: Control+Shift+5, functional: true}
   Schema_switchen: {label: EN, send: Control+Shift+5, functional: false}
-  Keyboard_v2: {label: "✾", functional: false, send: v}
-  Keyboard_r2: {label: "❀", functional: false, send: r}
-  Keyboard_fc: {label: "'分词", send: apostrophe, functional: false}
-  Control_L: {label: "退格", send: Control_L, functional: false}
 
-  # aoeiu功能键
-  Keyboard_a: {label: "A", functional: false, send: asciicircum, key_text_color: bct0}
-  Keyboard_u: {label: "U", functional: false, send: exclam, key_text_color: bct0}
-  Keyboard_i: {label: "I", functional: false, send: question, key_text_color: bct0}
-  Keyboard_o: {label: "O", functional: false, send: comma, key_text_color: bct0}
-  Keyboard_e: {label: "E", functional: false, send: period, key_text_color: bct0}
-
-  Keyboard_u2: {label: "丨", text: '""{Left}'}
-  Keyboard_a2: {label: "一", send: 0}
-  Keyboard_i2: {label: "丿", text: "''{Left}"}
-  Keyboard_o2: {label: "丶", send: 9}
-  Keyboard_e2: {label: "ㄥ", text: "{}{Left}"}
-  Keyboard_k: {label: "一", send: A}
-  Keyboard_v: {label: "丨", send: U}
-  Keyboard_h: {label: "丿", send: I}
-  Keyboard_r: {label: "丶", send: O}
-  Keyboard_e0: {label: "ㄥ", send: E}
-  
-  Keyboard_a3: {label: "……", functional: false, send: asciicircum}
+  Keyboard_period: {label: " 。", functional: false, send: period}
+  Keyboard_comma: {label: " ，", functional: false, send: comma}
+  Keyboard_period_en: {label: ".", functional: false, send: period}
+  Keyboard_comma_en: {label: ",", functional: false, send: comma}
+  keyboard_second: {label: " ，", functional: false, send: 2}
+  keyboard_third: {label: " 。", functional: false, send: 3}
 
    # 表情键自定义
   Keyboard_bqfh: {label: ⌘, functional: true, send: Eisu_toggle, select: bqfh1}
