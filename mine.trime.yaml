@@ -550,6 +550,11 @@ tool_bar:
       bg_normal: candidate_text_color
     action: Hide
 
+  ime_button: &ime_button
+    foreground:
+      style: "ic@microphone"
+    action: IME_switch2
+
   emoji_button: &emoji_button
     foreground:
       style: "ic@emoticon"
@@ -557,7 +562,7 @@ tool_bar:
 
   clipboard_button: &clipboard_button
     foreground:
-      style: "ic@clipboard"
+      style: "ic@clipboard-text"
     action: liquid_keyboard_clipboard
 
   ascii_mode_button: &ascii_mode_button
@@ -568,7 +573,7 @@ tool_bar:
     action: Mode_switch
 
   # 右侧按钮列表（从右向左排列）
-  buttons: [ *hide_button, *emoji_button, *clipboard_button, *ascii_mode_button ]
+  buttons: [ *hide_button, *ime_button, *emoji_button, *clipboard_button, *ascii_mode_button ]
 
 #键盘布局
 preset_keyboards:
