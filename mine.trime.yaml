@@ -615,7 +615,7 @@ preset_keyboards:
       - {click: b, long_click: '?', swipe_up: '?', swipe_left: '?', swipe_right: '?', swipe_down: '?', key_back_color: bh3, key_text_color: th3}
       - {click: n, long_click: ';', swipe_up: ';', swipe_left: ';', swipe_right: ';', swipe_down: ';', key_back_color: bh3, key_text_color: th3}
       - {click: m, long_click: ':', swipe_up: ':', swipe_left: ':', swipe_right: ':', swipe_down: Keyboard_numberb, key_back_color: bh3, key_text_color: th3, hint: '✍🏻️'}
-      - {click: BackSpace, width: 15, key_back_color: bbs, key_text_color: tb3, hilited_key_back_color: gnb, hilited_key_text_color: tgn}
+      - {click: BackSpace, swipe_up: Clear, swipe_down: Clear, swipe_left: Clear, swipe_right: Clear, width: 15, key_back_color: bbs, key_text_color: tb3, hilited_key_back_color: gnb, hilited_key_text_color: tgn}
 
       - {width: 2, key_back_color: bh2, key_text_color: th2}
       - {click: Keyboard_number, width: 22, key_back_color: num, key_text_color: ntb, round_corner: *round3, hilited_key_back_color: num, hilited_key_text_color: ntb}
@@ -3322,7 +3322,7 @@ preset_keys:
   space: {repeatable: false, preview: ' ', functional: false, label: '_______', send: space}
   space1: {repeatable: false, label: '空格', functional: false, send: space}
   space2: {repeatable: false, preview: ' ', functional: false, label: '⎵', send: space}
-  Clear: {label: 全清, send: Clear}
+  Clear: {label: ' ', text: '{Control+a}{BackSpace}' }
   Escape: {label: 取消, functional: false, send: Escape}
   Home: {label: 行首, send: Home, functional: false}
   Insert: {label: 插入, send: Insert}
