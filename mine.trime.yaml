@@ -553,7 +553,7 @@ tool_bar:
   ime_button: &ime_button
     foreground:
       style: "ic@microphone"
-    action: IME_switch2
+    action: VOICE_ASSIST
 
   emoji_button: &emoji_button
     foreground:
@@ -3368,8 +3368,6 @@ preset_keys:
   liquid_keyboard_clipboard: { label: '󰕲', send: function, command: liquid_keyboard, option: "剪贴" }
   menu_keyboard: { label: 菜单, send: function, command: menu_keyboard }
   Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 中文, EN ]}
-  IME_switch: {label: 🌐, send: LANGUAGE_SWITCH} #彈出對話框選擇輸入法
-  IME_switch2: {label: 🌐, send: LANGUAGE_SWITCH, select: .next} #彈出對話框選擇輸入法
   IME_last: {label: 上一输入法, send: LANGUAGE_SWITCH, select: .last} #直接切換到上一輸入法
   IME_next: {label: 下一输入法, send: LANGUAGE_SWITCH, select: .next} #直接切換到下一輸入法
   Schema_switch: {label: 下一方案, functional: false, send: Control+Shift+1}
