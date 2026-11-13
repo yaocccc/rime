@@ -5,6 +5,7 @@
 ## Features
 
 - [小鹤双拼](#小鹤双拼)
+- [万象语言模型](#万象语言模型)
 - [emoji混输](#emoji混输)
 - [中英混输](#中英混输)
 - [基于二笔输入法的形码辅助码](#基于二笔输入法的形码辅助码)
@@ -56,6 +57,23 @@ GLFW_IM_MODULE=ibus' >> /etc/environment
 mkdir -p ~/.local/share/fcitx5
 git clone https://github.com/yaocccc/rime ~/.local/share/fcitx5/rime
 ```
+
+## 万象语言模型
+
+`mine.schema.yaml` 已接入万象简体 LTS 语言模型，用于改善拼音组句。`translator/max_homophones: 8` 让组句时每个词可考虑多个同音候选；默认值为 1 时，历史词频可能使正确词根本无法进入模型比较。保留小鹤双拼、二笔辅助码、固定短语、中英混输和用户词库；这是本地 Octagram 模型，不是 Qwen/LLM 候选重排，也不需要联网推理或 GPU。
+
+要求 Rime 内核支持 Octagram（本机 Arch Linux 的 `librime` 包已包含 `librime-octagram.so`）。模型约 390 MiB，不纳入 Git。使用仓库内的 `update-gram.py` 下载或更新（仅需 Python 3，无第三方依赖）：
+
+```shell
+cd ~/.local/share/fcitx5/rime
+python3 update-gram.py
+```
+
+首次运行下载模型，以后运行同一命令检查官方 LTS 更新。脚本核对官方文件大小和 SHA-256，已是最新时跳过下载；校验成功才原子替换，下载失败或取消不会覆盖旧模型。模型始终保存到脚本所在目录（与 `mine.schema.yaml` 同级），不受执行时工作目录影响。脚本不会自动重启输入法。下载后通过 Fcitx5 输入法菜单执行“重新部署”；若没有该入口，可退出 Fcitx5 后执行 `rime_deployer --build "$PWD" /usr/share/rime-data "$PWD/build"`，再启动 Fcitx5。其他前端请使用其对应的用户目录和重新部署入口。
+
+更新模型：再次运行 `python3 update-gram.py`，更新后重新部署；若旧模型仍在使用，请重启输入法。停用或回退：删除 `mine.schema.yaml` 中整个 `grammar:` 配置块并重新部署，然后可删除模型文件；无需删除用户词库。候选排序可能变化，固定短语和辅助码的原有配置不变。
+
+模型与发布信息：[万象数据 LTS](https://github.com/amzxyz/rime-wanxiang-data/releases/tag/LTS)；参数参考：[万象词库与模型文档](https://amzxyz.github.io/rime-wanxiang/doc/dict_gram.html)。
 
 ## 按键说明
 

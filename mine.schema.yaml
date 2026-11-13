@@ -89,8 +89,20 @@ speller:
     - xform/in$/B/
     - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
 
+# 万象简体语言模型：文件放在 Rime 用户目录，不改变双拼或辅助码。
+grammar:
+  language: wanxiang-lts-zh-hans
+  collocation_max_length: 8
+  collocation_min_length: 2
+  collocation_penalty: -15
+  non_collocation_penalty: -5
+  weak_collocation_penalty: -100
+  rear_penalty: -10
+
 translator:
   dictionary: pinyin.extended
+  # 默认仅取 1 个同音候选；扩大范围，让语言模型能纠正历史词频造成的误选。
+  max_homophones: 8
   # 输入码翻译为拼音
   # preedit_format:
   #   - xform/([bpmfdtnljqx])n/$1iao/

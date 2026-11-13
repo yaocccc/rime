@@ -16,3 +16,7 @@ installation.yaml
 **/*.userdb
 installation.yaml
 dicts/top/private.txt
+# 本地语言模型与下载临时文件
+*.gram
+*.gram.part
+*.gram.*.part
