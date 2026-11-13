@@ -10,7 +10,7 @@ patch:
     - zh_hans
   menu/page_size: 5
   ascii_composer:
-    good_old_caps_lock: true
+    good_old_caps_lock: false
     switch_key:
       Shift_L: noop
       Shift_R: noop
